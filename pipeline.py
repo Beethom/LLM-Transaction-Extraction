@@ -1,23 +1,3 @@
-"""
-LLM Transaction Extraction & Evaluation Pipeline
-==================================================
-Evaluates how well LLMs convert messy bank transaction strings
-into structured JSON representations.
-
-Usage (ChatGPT / OpenAI):
-  1. Get an OpenAI API key from platform.openai.com
-  2. export OPENAI_API_KEY=your-key-here
-  3. python pipeline.py
-
-Usage (Claude / Anthropic):
-  1. Get an Anthropic API key from console.anthropic.com
-  2. export ANTHROPIC_API_KEY=your-key-here
-  3. python pipeline.py --provider anthropic
-
-Author: Beethoven Marhone
-Course: CAP 6640 - NLP, University of Central Florida
-"""
-
 import json
 import csv
 import os
@@ -25,7 +5,6 @@ import time
 import urllib.request
 import urllib.error
 from collections import Counter
-from typing import Optional
 
 try:
     import matplotlib
@@ -36,24 +15,16 @@ try:
 except ImportError:
     HAS_MATPLOTLIB = False
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
-PROVIDER = "openai"   # "openai" or "anthropic"
+PROVIDER = "openai"
 
-# OpenAI / ChatGPT
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
-OPENAI_MODEL   = "gpt-4o"
-OPENAI_URL     = "https://api.openai.com/v1/chat/completions"
+OPENAI_MODEL = "gpt-4o"
+OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 
-# Anthropic / Claude
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-ANTHROPIC_MODEL   = "claude-sonnet-4-20250514"
-ANTHROPIC_URL     = "https://api.anthropic.com/v1/messages"
+ANTHROPIC_MODEL = "claude-sonnet-4-20250514"
+ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 
-# ============================================================
-# SCHEMA PROMPT
-# ============================================================
 PROMPT_TEMPLATE = """Extract structured transaction data from the text below using the following strict schema and rules.
 
 Required JSON fields:
@@ -79,9 +50,6 @@ Transaction text:
 Amount: ${amount}
 """
 
-# ============================================================
-# DATASET — 74 real banking transactions
-# ============================================================
 DATASET = [
     {"id": 1, "raw": "POS Credit Adjustment 0898 Transaction 02-27-26 Earnin Gc Mountain View CA", "amount": 50.00},
     {"id": 2, "raw": "Deposit - ACH Paid From Outcomes Operati Payroll 01Afd1", "amount": 963.48},
@@ -160,12 +128,7 @@ DATASET = [
 ]
 
 
-# ============================================================
-# LLM CALLS
-# ============================================================
-
-def call_openai(raw_text: str, amount: float, retries: int = 3) -> str:
-    """Send transaction to OpenAI ChatGPT API and return raw response."""
+def call_openai(raw_text, amount, retries=3):
     prompt = PROMPT_TEMPLATE.format(transaction_text=raw_text, amount=amount)
 
     payload = json.dumps({
@@ -175,13 +138,14 @@ def call_openai(raw_text: str, amount: float, retries: int = 3) -> str:
         "messages": [{"role": "user", "content": prompt}]
     }).encode("utf-8")
 
-    for attempt in range(retries):
+    attempt = 0
+    while attempt < retries:
         req = urllib.request.Request(
             OPENAI_URL,
             data=payload,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Authorization": "Bearer " + OPENAI_API_KEY,
             },
             method="POST"
         )
@@ -194,6 +158,7 @@ def call_openai(raw_text: str, amount: float, retries: int = 3) -> str:
                 wait = 10 * (2 ** attempt)
                 print(f"  Rate limit hit, retrying in {wait}s... (attempt {attempt + 1}/{retries})")
                 time.sleep(wait)
+                attempt += 1
                 continue
             print(f"  API Error {e.code}: {e.read().decode()[:200]}")
             return ""
@@ -203,8 +168,7 @@ def call_openai(raw_text: str, amount: float, retries: int = 3) -> str:
     return ""
 
 
-def call_claude(raw_text: str, amount: float, retries: int = 3) -> str:
-    """Send transaction to Claude API and return raw response."""
+def call_claude(raw_text, amount, retries=3):
     prompt = PROMPT_TEMPLATE.format(transaction_text=raw_text, amount=amount)
 
     payload = json.dumps({
@@ -214,7 +178,8 @@ def call_claude(raw_text: str, amount: float, retries: int = 3) -> str:
         "messages": [{"role": "user", "content": prompt}]
     }).encode("utf-8")
 
-    for attempt in range(retries):
+    attempt = 0
+    while attempt < retries:
         req = urllib.request.Request(
             ANTHROPIC_URL,
             data=payload,
@@ -237,6 +202,7 @@ def call_claude(raw_text: str, amount: float, retries: int = 3) -> str:
                 wait = 10 * (2 ** attempt)
                 print(f"  Rate limit hit, retrying in {wait}s... (attempt {attempt + 1}/{retries})")
                 time.sleep(wait)
+                attempt += 1
                 continue
             print(f"  API Error {e.code}: {e.read().decode()[:200]}")
             return ""
@@ -246,15 +212,13 @@ def call_claude(raw_text: str, amount: float, retries: int = 3) -> str:
     return ""
 
 
-# ============================================================
-# JSON PARSER
-# ============================================================
-
-def parse_response(text: str) -> Optional[dict]:
-    """Parse LLM response into dict. Handles markdown fences."""
+def parse_response(text):
     text = text.strip()
     if text.startswith("```"):
-        text = text.split("\n", 1)[1] if "\n" in text else text[3:]
+        if "\n" in text:
+            text = text.split("\n", 1)[1]
+        else:
+            text = text[3:]
     if text.endswith("```"):
         text = text[:-3]
     text = text.strip()
@@ -270,62 +234,41 @@ def parse_response(text: str) -> Optional[dict]:
         return None
 
 
-# ============================================================
-# FIELD COMPARISON
-# ============================================================
-
 def norm(s):
-    """Normalize string for comparison."""
     if s is None:
         return None
     return str(s).strip().lower()
 
 
-def compare(predicted: dict, ground_truth: dict) -> dict:
-    """Compare each field. Returns dict of field_name -> bool."""
+def compare(predicted, ground_truth):
     results = {}
 
-    # Amount — exact numeric match
     results["amount"] = (predicted.get("total_amount") == ground_truth.get("total_amount"))
-
-    # Date — string match
     results["date"] = (norm(predicted.get("transaction_date")) == norm(ground_truth.get("transaction_date")))
-
-    # Merchant — normalized string match
     results["merchant"] = (norm(predicted.get("merchant_name")) == norm(ground_truth.get("merchant_name")))
-
-    # Category — exact match
     results["category"] = (norm(predicted.get("category")) == norm(ground_truth.get("category")))
-
-    # Transaction type — exact match
     results["type"] = (norm(predicted.get("transaction_type")) == norm(ground_truth.get("transaction_type")))
 
-    # City — both None or matching
-    pred_city = norm(predicted.get("city"))
-    true_city = norm(ground_truth.get("city"))
-    results["city"] = (pred_city == true_city)
+    p_city = norm(predicted.get("city"))
+    g_city = norm(ground_truth.get("city"))
+    results["city"] = (p_city == g_city)
 
     return results
 
 
-# ============================================================
-# MAIN PIPELINE
-# ============================================================
-
-def call_llm(raw_text: str, amount: float) -> str:
-    """Dispatch to the configured LLM provider."""
+def call_llm(raw_text, amount):
     if PROVIDER == "openai":
         return call_openai(raw_text, amount)
     return call_claude(raw_text, amount)
 
 
-def active_model() -> str:
-    return OPENAI_MODEL if PROVIDER == "openai" else ANTHROPIC_MODEL
+def active_model():
+    if PROVIDER == "openai":
+        return OPENAI_MODEL
+    return ANTHROPIC_MODEL
 
 
 def run_pipeline():
-    """Run extraction on all transactions and evaluate."""
-
     if PROVIDER == "openai" and not OPENAI_API_KEY:
         print("ERROR: Set your OpenAI API key first:")
         print("  export OPENAI_API_KEY=your-key-here")
@@ -337,17 +280,21 @@ def run_pipeline():
         print("\nGet a key at: https://console.anthropic.com")
         return
 
-    # Resume: load any previously completed results
     completed = {}
     if os.path.exists("llm_outputs.json"):
         with open("llm_outputs.json") as f:
-            for r in json.load(f):
-                if r.get("json_valid"):
-                    completed[r["id"]] = r
+            prev = json.load(f)
+        for r in prev:
+            if r.get("json_valid"):
+                completed[r["id"]] = r
         if completed:
             print(f"Resuming — {len(completed)} transactions already done, skipping.")
 
-    remaining = [e for e in DATASET if e["id"] not in completed]
+    remaining = []
+    for e in DATASET:
+        if e["id"] not in completed:
+            remaining.append(e)
+
     print(f"Running pipeline on {len(remaining)}/{len(DATASET)} transactions...")
     print(f"Provider: {PROVIDER.upper()}  |  Model: {active_model()}\n")
 
@@ -360,11 +307,9 @@ def run_pipeline():
         amt = entry["amount"]
         print(f"[{i:3d}/{len(DATASET)}] {raw[:60]}...")
 
-        # Call LLM
         response = call_llm(raw, amt)
-        time.sleep(5)  # 5s gap between calls
+        time.sleep(5)
 
-        # Parse
         predicted = parse_response(response)
 
         if predicted is None:
@@ -380,10 +325,9 @@ def run_pipeline():
         all_results.append({
             "id": i, "raw": raw, "amount": amt,
             "json_valid": True, "predicted": predicted,
-            "fields": None  # filled after ground truth comparison
+            "fields": None
         })
 
-    # ---- Save raw LLM outputs ----
     with open("llm_outputs.json", "w") as f:
         json.dump(all_results, f, indent=2, default=str)
     print(f"\nLLM outputs saved to llm_outputs.json")
@@ -402,7 +346,6 @@ after creating ground_truth.json to compute accuracy metrics.
 See ground_truth_template.json for the format.
 """)
 
-    # Generate ground truth template
     template = []
     for r in all_results:
         if r["json_valid"]:
@@ -410,7 +353,7 @@ See ground_truth_template.json for the format.
                 "id": r["id"],
                 "raw": r["raw"],
                 "llm_output": r["predicted"],
-                "ground_truth": r["predicted"]  # pre-fill with LLM output, user corrects
+                "ground_truth": r["predicted"]
             })
         else:
             template.append({
@@ -434,8 +377,6 @@ See ground_truth_template.json for the format.
 
 
 def run_evaluation():
-    """Compare LLM outputs against ground truth and compute metrics."""
-
     if not os.path.exists("llm_outputs.json"):
         print("ERROR: Run 'python pipeline.py' first to generate LLM outputs.")
         return
@@ -450,24 +391,29 @@ def run_evaluation():
     with open("ground_truth.json") as f:
         truths = json.load(f)
 
-    # Index ground truth by id
-    gt_map = {item["id"]: item["ground_truth"] for item in truths}
+    gt_map = {}
+    for item in truths:
+        gt_map[item["id"]] = item["ground_truth"]
 
     total = len(outputs)
-    valid = [r for r in outputs if r["json_valid"]]
+
+    valid = []
+    for r in outputs:
+        if r["json_valid"]:
+            valid.append(r)
+
     json_rate = len(valid) / total * 100
 
-    # Maps compare() short key -> actual JSON field name
     FIELD_KEY = {
-        "amount":   "total_amount",
-        "date":     "transaction_date",
+        "amount": "total_amount",
+        "date": "transaction_date",
         "merchant": "merchant_name",
         "category": "category",
-        "type":     "transaction_type",
-        "city":     "city",
+        "type": "transaction_type",
+        "city": "city",
     }
 
-    fields_by_id = {}   # id -> field_results dict
+    fields_by_id = {}
     errors = []
 
     for r in valid:
@@ -485,11 +431,10 @@ def run_evaluation():
                     "id": r["id"],
                     "field": field,
                     "predicted": r["predicted"].get(key, ""),
-                    "expected":  gt.get(key, ""),
+                    "expected": gt.get(key, ""),
                     "raw": r["raw"][:80]
                 })
 
-    # Compute per-field accuracy
     scored = list(fields_by_id.values())
     n = len(scored)
     metrics = {
@@ -499,10 +444,15 @@ def run_evaluation():
     }
 
     for field in ["amount", "date", "merchant", "category", "type", "city"]:
-        correct = sum(1 for f in scored if f.get(field, False))
-        metrics[f"{field}_accuracy"] = round(correct / n * 100, 1) if n else 0
+        count = 0
+        for f in scored:
+            if f.get(field, False):
+                count += 1
+        if n > 0:
+            metrics[field + "_accuracy"] = round(count / n * 100, 1)
+        else:
+            metrics[field + "_accuracy"] = 0
 
-    # ---- Print Report ----
     print("\n" + "=" * 55)
     print("       EXTRACTION ACCURACY REPORT")
     print("=" * 55)
@@ -517,7 +467,6 @@ def run_evaluation():
     print(f"  City Extraction:          {metrics['city_accuracy']}%")
     print("=" * 55)
 
-    # Error breakdown
     if errors:
         print(f"\n  Total field-level errors: {len(errors)}")
         print("\n  Error Breakdown by Field:")
@@ -530,7 +479,6 @@ def run_evaluation():
             print(f"    [ID {e['id']}] {e['field']}: expected '{e['expected']}' got '{e['predicted']}'")
             print(f"      Raw: {e['raw']}...")
 
-    # ---- Save outputs ----
     with open("metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
 
@@ -562,31 +510,32 @@ def run_evaluation():
         print("\n  (Install matplotlib to auto-generate figures: pip install matplotlib)")
 
 
-# ============================================================
-# FIGURE GENERATION
-# ============================================================
-
-def generate_figures(metrics: dict):
-    """Generate bar_chart.png and pipeline_figure.png into figures/."""
+def generate_figures(metrics):
     os.makedirs("figures", exist_ok=True)
 
-    # ── Bar chart ──────────────────────────────────────────────
     fields = ["Amount", "Date", "Merchant", "Category", "Type", "City"]
-    keys   = ["amount_accuracy", "date_accuracy", "merchant_accuracy",
-              "category_accuracy", "type_accuracy", "city_accuracy"]
+    keys = ["amount_accuracy", "date_accuracy", "merchant_accuracy",
+            "category_accuracy", "type_accuracy", "city_accuracy"]
     values = [metrics.get(k, 0) for k in keys]
 
+    colors = []
+    for v in values:
+        if v >= 80:
+            colors.append("#2196F3")
+        elif v >= 60:
+            colors.append("#FF9800")
+        else:
+            colors.append("#F44336")
+
     fig, ax = plt.subplots(figsize=(8, 5))
-    colors = ["#2196F3" if v >= 80 else "#FF9800" if v >= 60 else "#F44336"
-              for v in values]
     bars = ax.bar(fields, values, color=colors, edgecolor="white", linewidth=0.8)
 
     ax.set_ylim(0, 110)
     ax.set_ylabel("Accuracy (%)", fontsize=12)
     ax.set_title(
-        f"Gemini {metrics.get('json_validity_rate', 0):.0f}% JSON Validity — "
+        f"{metrics.get('json_validity_rate', 0):.0f}% JSON Validity — "
         f"Field-Level Extraction Accuracy\n"
-        f"Model: {ANTHROPIC_MODEL}  |  n = {metrics.get('total_transactions', 0)} transactions",
+        f"Model: {active_model()}  |  n = {metrics.get('total_transactions', 0)} transactions",
         fontsize=11
     )
     ax.axhline(100, color="gray", linestyle="--", linewidth=0.7, alpha=0.5)
@@ -608,7 +557,6 @@ def generate_figures(metrics: dict):
     plt.close(fig)
     print("  figures/bar_chart.png")
 
-    # ── Pipeline diagram ───────────────────────────────────────
     fig, ax = plt.subplots(figsize=(12, 3.5))
     ax.set_xlim(0, 12)
     ax.set_ylim(0, 3.5)
@@ -619,7 +567,7 @@ def generate_figures(metrics: dict):
     steps = [
         (0.6,  "Raw Bank\nTransaction", "#E3F2FD", "#1565C0"),
         (2.8,  "Prompt\nTemplate",      "#F3E5F5", "#6A1B9A"),
-        (5.0,  "Gemini\nAPI Call",      "#E8F5E9", "#2E7D32"),
+        (5.0,  "LLM\nAPI Call",         "#E8F5E9", "#2E7D32"),
         (7.2,  "JSON\nParser",          "#FFF3E0", "#E65100"),
         (9.4,  "Field\nComparison",     "#FCE4EC", "#880E4F"),
         (11.4, "Accuracy\nMetrics",     "#E0F2F1", "#004D40"),
@@ -638,12 +586,10 @@ def generate_figures(metrics: dict):
         ax.text(x, y_center, label, ha="center", va="center",
                 fontsize=9, fontweight="bold", color=fg)
 
-    # Arrows between boxes
-    arrow_props = dict(arrowstyle="-|>", color="#555555",
-                       lw=1.4, mutation_scale=14)
+    arrow_props = dict(arrowstyle="-|>", color="#555555", lw=1.4, mutation_scale=14)
     for i in range(len(steps) - 1):
-        x_start = steps[i][0]   + box_w / 2 + 0.04
-        x_end   = steps[i+1][0] - box_w / 2 - 0.04
+        x_start = steps[i][0] + box_w / 2 + 0.04
+        x_end = steps[i+1][0] - box_w / 2 - 0.04
         ax.annotate("", xy=(x_end, y_center), xytext=(x_start, y_center),
                     arrowprops=arrow_props)
 
@@ -658,9 +604,6 @@ def generate_figures(metrics: dict):
     print("  figures/pipeline_figure.png")
 
 
-# ============================================================
-# ENTRY POINT
-# ============================================================
 if __name__ == "__main__":
     import sys
 

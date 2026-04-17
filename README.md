@@ -1,74 +1,40 @@
-# LLM Transaction Extraction Pipeline
+# LLM Transaction Extraction
 
-Evaluating how well Large Language Models convert unstructured banking transaction strings into structured JSON representations.
+Testing how well LLMs handle messy bank statement text — can they turn noisy transaction descriptions into clean JSON?
 
-**Author:** Beethoven Marhone  
-**Course:** CAP 6640 – Natural Language Processing, University of Central Florida  
+**Beethoven Marhone**  
+CAP 6640 – NLP, University of Central Florida  
 
-## Overview
+## What this does
 
-This project tests whether LLMs can reliably extract structured data (merchant names, dates, amounts, categories, cities) from messy, real-world bank statement text. The pipeline sends raw transaction strings to an LLM with a schema-constrained prompt, validates the JSON output, and compares each field against manually curated ground truth labels.
+Bank statements are messy. Merchants show up as "Rmtly* Fffe7" instead of "Remitly." Store numbers, phone numbers, and state codes get mixed in. This project takes 74 real transactions like that, feeds them to Claude (Haiku, Sonnet, and Opus), and checks how well each model extracts merchant names, dates, amounts, categories, and cities.
 
-## Dataset
+## How to run it
 
-- **74 real banking transactions** from everyday debit/credit card activity
-- Includes: restaurants, gas stations, fintech apps, remittances, subscriptions, transfers, deposits
-- Ground truth labels manually defined for all six extraction fields
+Get an API key from [console.anthropic.com](https://console.anthropic.com), then:
 
-## Pipeline
-
-```
-Raw Transaction Text → Prompt Construction → LLM (Gemini) → JSON Output → Validation → Field Comparison → Accuracy Metrics
-```
-
-## Setup
-
-1. Get a free Google Gemini API key at [aistudio.google.com](https://aistudio.google.com)
-2. Set your key:
-   ```bash
-   export GEMINI_API_KEY=your-key-here
-   ```
-
-## Usage
-
-### Step 1: Run extraction
 ```bash
-python pipeline.py
+export ANTHROPIC_API_KEY=sk-ant-your-key-here
+python3 pipeline.py
 ```
-This sends all 74 transactions to the LLM and saves outputs to `llm_outputs.json`.
 
-### Step 2: Create ground truth
-Copy `ground_truth_template.json` to `ground_truth.json` and correct any wrong fields.
+After it finishes, copy `ground_truth_template.json` to `ground_truth.json`, fix any wrong labels, then:
 
-### Step 3: Evaluate
 ```bash
-python pipeline.py --evaluate
+python3 pipeline.py --evaluate
 ```
-This computes field-level accuracy metrics and saves results to `metrics.json`, `results.csv`, and `error_analysis.json`.
 
-## Evaluation Metrics
+That prints accuracy numbers and saves results to `metrics.json`, `results.csv`, and `error_analysis.json`.
 
-| Metric | Description |
-|--------|-------------|
-| JSON Validity | % of responses that are valid JSON |
-| Amount Accuracy | Correct numeric extraction |
-| Date Accuracy | Correct transaction date selection |
-| Merchant Normalization | Cleaned merchant name matches ground truth |
-| Category Classification | Correct category assignment |
-| Transaction Type | Correct type identification |
-| City Extraction | Correct city identification |
+## What's in the repo
 
-## Project Structure
+- `pipeline.py` — runs extraction and evaluation
+- `ground_truth.json` — manually labeled correct answers
+- `metrics.json` — accuracy results per model
+- `results.csv` — per-transaction breakdown
+- `error_analysis.json` — what went wrong and where
+- `figures/` — pipeline diagram and bar chart for the paper
 
-```
-├── README.md
-├── pipeline.py              # Main extraction & evaluation pipeline
-├── llm_outputs.json         # Raw LLM responses (generated)
-├── ground_truth.json        # Manually verified correct labels
-├── metrics.json             # Accuracy metrics (generated)
-├── results.csv              # Per-transaction results (generated)
-├── error_analysis.json      # Detailed error patterns (generated)
-└── figures/
-    ├── pipeline_figure.png  # Pipeline diagram for paper
-    └── bar_chart.png        # Accuracy bar chart for paper
-```
+## Results (short version)
+
+All three models got 100% on JSON validity, amounts, dates, and cities. Semantic fields were harder — merchant normalization peaked at 51.4% with Opus, category hit 78.4%, and transaction type hit 74.3% with Haiku. Bigger model does not always mean better.
