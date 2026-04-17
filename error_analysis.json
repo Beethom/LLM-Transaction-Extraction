@@ -1,0 +1,618 @@
+[
+  {
+    "id": 1,
+    "field": "merchant",
+    "predicted": "Earnin Gc",
+    "expected": "Earnin",
+    "raw": "POS Credit Adjustment 0898 Transaction 02-27-26 Earnin Gc Mountain View CA"
+  },
+  {
+    "id": 1,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0898 Transaction 02-27-26 Earnin Gc Mountain View CA"
+  },
+  {
+    "id": 2,
+    "field": "merchant",
+    "predicted": "Outcomes Operati",
+    "expected": "Outcomes Operations",
+    "raw": "Deposit - ACH Paid From Outcomes Operati Payroll 01Afd1"
+  },
+  {
+    "id": 3,
+    "field": "merchant",
+    "predicted": "Floatme Subscripti",
+    "expected": "Floatme",
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Floatme Subscripti San Antonio TX"
+  },
+  {
+    "id": 4,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "services",
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Rmtly* Fffe7 Remitly.Com WA"
+  },
+  {
+    "id": 4,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Rmtly* Fffe7 Remitly.Com WA"
+  },
+  {
+    "id": 5,
+    "field": "merchant",
+    "predicted": "Cleo Advance Repa Meetcleo.Com",
+    "expected": "Cleo",
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Cleo* Advance Repa Meetcleo.Com DE"
+  },
+  {
+    "id": 5,
+    "field": "type",
+    "predicted": "other",
+    "expected": "purchase",
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Cleo* Advance Repa Meetcleo.Com DE"
+  },
+  {
+    "id": 6,
+    "field": "merchant",
+    "predicted": "Zip App Pay Later",
+    "expected": "Zip",
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Zip* App Pay Later 183-37823729 Ny"
+  },
+  {
+    "id": 7,
+    "field": "merchant",
+    "predicted": "Zip App Pay Later",
+    "expected": "Zip",
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Zip* App Pay Later 183-37823729 Ny"
+  },
+  {
+    "id": 8,
+    "field": "merchant",
+    "predicted": "creditgenie Cash",
+    "expected": "CreditGenie",
+    "raw": "POS Debit- Debit Card 0898 02-27-26 *creditgenie Cash Conshohocken PA"
+  },
+  {
+    "id": 9,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "recurring",
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Gptzero* Trial Ove Www.Gptzero.M Ny"
+  },
+  {
+    "id": 10,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "services",
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Rmtly* B610A Remitly.Com WA"
+  },
+  {
+    "id": 11,
+    "field": "merchant",
+    "predicted": "Brigit-com Membership",
+    "expected": "Brigit",
+    "raw": "Paid To - Brigit-com Membership Chk 8410676"
+  },
+  {
+    "id": 12,
+    "field": "merchant",
+    "predicted": "Brigit-com Protection",
+    "expected": "Brigit",
+    "raw": "Paid To - Brigit-com Protection Chk 8410676"
+  },
+  {
+    "id": 12,
+    "field": "type",
+    "predicted": "other",
+    "expected": "recurring",
+    "raw": "Paid To - Brigit-com Protection Chk 8410676"
+  },
+  {
+    "id": 13,
+    "field": "merchant",
+    "predicted": "Dividend",
+    "expected": null,
+    "raw": "Dividend"
+  },
+  {
+    "id": 13,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "other",
+    "raw": "Dividend"
+  },
+  {
+    "id": 14,
+    "field": "merchant",
+    "predicted": "Dave Inc",
+    "expected": "Dave",
+    "raw": "POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA"
+  },
+  {
+    "id": 14,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA"
+  },
+  {
+    "id": 15,
+    "field": "merchant",
+    "predicted": "Dave Inc",
+    "expected": "Dave",
+    "raw": "POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA"
+  },
+  {
+    "id": 15,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA"
+  },
+  {
+    "id": 17,
+    "field": "category",
+    "predicted": "transfer",
+    "expected": "other",
+    "raw": "Deposit - RTP Paid From Ml Plus LLC"
+  },
+  {
+    "id": 18,
+    "field": "category",
+    "predicted": "transfer",
+    "expected": "other",
+    "raw": "Deposit - RTP Paid From Ml Plus LLC"
+  },
+  {
+    "id": 21,
+    "field": "merchant",
+    "predicted": "Dave Inc",
+    "expected": "Dave",
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Dave Inc Dave.Com CA"
+  },
+  {
+    "id": 25,
+    "field": "merchant",
+    "predicted": "Dave Inc",
+    "expected": "Dave",
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Dave Inc Dave.Com CA"
+  },
+  {
+    "id": 27,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "retail",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Klarna* Apple Klarna.Com OH"
+  },
+  {
+    "id": 28,
+    "field": "type",
+    "predicted": "other",
+    "expected": "purchase",
+    "raw": "POS Debit- Debit Card 0384 05-23-25 Enableloans 855-2115599 SD"
+  },
+  {
+    "id": 30,
+    "field": "merchant",
+    "predicted": "Best Buy Auto",
+    "expected": "Best Buy",
+    "raw": "Paid To - Best Buy Auto Pymt Chk 12240215"
+  },
+  {
+    "id": 31,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Earnin Cdhbd_b Palo Alto CA"
+  },
+  {
+    "id": 32,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Ap",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL"
+  },
+  {
+    "id": 32,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL"
+  },
+  {
+    "id": 33,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Ap",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL"
+  },
+  {
+    "id": 33,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL"
+  },
+  {
+    "id": 34,
+    "field": "merchant",
+    "predicted": "Apple.Com/Bill",
+    "expected": "Apple",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Pp*apple.Com/Bill 402-935-7733 CA"
+  },
+  {
+    "id": 34,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "recurring",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Pp*apple.Com/Bill 402-935-7733 CA"
+  },
+  {
+    "id": 35,
+    "field": "merchant",
+    "predicted": "365 Market J 888 4",
+    "expected": "365 Market",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 365 Market J 888 4 Troy MI"
+  },
+  {
+    "id": 37,
+    "field": "merchant",
+    "predicted": "Zelle Stephane Ly Visa Direct",
+    "expected": "Stephane Ly",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ"
+  },
+  {
+    "id": 37,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ"
+  },
+  {
+    "id": 38,
+    "field": "merchant",
+    "predicted": "Zelle Stephane Ly Visa Direct",
+    "expected": "Stephane Ly",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Zelle*stephane Ly Visa Direct AZ"
+  },
+  {
+    "id": 38,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Zelle*stephane Ly Visa Direct AZ"
+  },
+  {
+    "id": 39,
+    "field": "merchant",
+    "predicted": "Apple.Com/Bill",
+    "expected": "Apple",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Apple.Com/Bill 866-712-7753 CA"
+  },
+  {
+    "id": 39,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "recurring",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Apple.Com/Bill 866-712-7753 CA"
+  },
+  {
+    "id": 40,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Cash App*ter Ro Oakland CA"
+  },
+  {
+    "id": 40,
+    "field": "type",
+    "predicted": "other",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Cash App*ter Ro Oakland CA"
+  },
+  {
+    "id": 41,
+    "field": "category",
+    "predicted": "retail",
+    "expected": "gas",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Wawa 5105 Orlando FL"
+  },
+  {
+    "id": 42,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Appl",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Hard Rock Bet Appl Davie FL"
+  },
+  {
+    "id": 45,
+    "field": "merchant",
+    "predicted": "Zelle*stephane Ly Visa Direct",
+    "expected": "Stephane Ly",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ"
+  },
+  {
+    "id": 45,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ"
+  },
+  {
+    "id": 46,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Ap",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-30-25 Hard Rock Bet Ap 5 Davie FL"
+  },
+  {
+    "id": 46,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-30-25 Hard Rock Bet Ap 5 Davie FL"
+  },
+  {
+    "id": 47,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "recurring",
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Playstation Networ 650-2956540 CA"
+  },
+  {
+    "id": 48,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Appl",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Hard Rock Bet Appl Davie FL"
+  },
+  {
+    "id": 49,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Appl",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Hard Rock Bet Appl Davie FL"
+  },
+  {
+    "id": 50,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Cash App*ter Ro*ad Oakland CA"
+  },
+  {
+    "id": 50,
+    "field": "type",
+    "predicted": "other",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Cash App*ter Ro*ad Oakland CA"
+  },
+  {
+    "id": 51,
+    "field": "merchant",
+    "predicted": "Dave Davesubfee",
+    "expected": "Dave",
+    "raw": "Paid To - Dave Davesubfee Chk 8410676"
+  },
+  {
+    "id": 51,
+    "field": "type",
+    "predicted": "other",
+    "expected": "recurring",
+    "raw": "Paid To - Dave Davesubfee Chk 8410676"
+  },
+  {
+    "id": 53,
+    "field": "merchant",
+    "predicted": "Zelle*anne R Vant",
+    "expected": "Anne R Vant",
+    "raw": "POS Credit Adjustment 0384 Transaction 06-02-25 Zelle*anne R Vant Visa Direct AZ"
+  },
+  {
+    "id": 53,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Credit Adjustment 0384 Transaction 06-02-25 Zelle*anne R Vant Visa Direct AZ"
+  },
+  {
+    "id": 53,
+    "field": "type",
+    "predicted": "transfer",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 06-02-25 Zelle*anne R Vant Visa Direct AZ"
+  },
+  {
+    "id": 54,
+    "field": "type",
+    "predicted": "other",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 05-31-25 Earnin Cecdb_b Palo Alto CA"
+  },
+  {
+    "id": 55,
+    "field": "merchant",
+    "predicted": "Cleo Ai Inc",
+    "expected": "Cleo AI",
+    "raw": "Deposit - ACH Paid From Cleo Ai Inc 12855771 ! 060225"
+  },
+  {
+    "id": 56,
+    "field": "merchant",
+    "predicted": "Idt Boss Intl Call",
+    "expected": "IDT",
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Idt Boss Intl Call Www.Idt.Net NJ"
+  },
+  {
+    "id": 57,
+    "field": "category",
+    "predicted": "retail",
+    "expected": "gas",
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Wawa 5105 Orlando FL"
+  },
+  {
+    "id": 58,
+    "field": "category",
+    "predicted": "retail",
+    "expected": "gas",
+    "raw": "POS Debit- Debit Card 0384 05-31-25 Wawa 5132 Orlando FL"
+  },
+  {
+    "id": 59,
+    "field": "category",
+    "predicted": "retail",
+    "expected": "gas",
+    "raw": "POS Debit - Debit Card 0384 Transaction 06-01-25 7-Eleven Kissimmee"
+  },
+  {
+    "id": 60,
+    "field": "merchant",
+    "predicted": "Cleo Ai Meetcleo.Com",
+    "expected": "Cleo AI",
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Cleo Ai Meetcleo.Com DE"
+  },
+  {
+    "id": 61,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Appl",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Debit- Debit Card 0384 05-31-25 Hard Rock Bet Appl Davie FL"
+  },
+  {
+    "id": 62,
+    "field": "merchant",
+    "predicted": "Zelle beethoven M Visa Direct",
+    "expected": "Beethoven M",
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Zelle*beethoven M Visa Direct AZ"
+  },
+  {
+    "id": 62,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Zelle*beethoven M Visa Direct AZ"
+  },
+  {
+    "id": 63,
+    "field": "category",
+    "predicted": "retail",
+    "expected": "gas",
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Wawa 5105 Orlando FL"
+  },
+  {
+    "id": 64,
+    "field": "merchant",
+    "predicted": "reversephone.C",
+    "expected": "ReversePhone",
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Re *reversephone.C 213-894-9165 Ny"
+  },
+  {
+    "id": 65,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-02-25 Cash App*ter Ro Oakland CA"
+  },
+  {
+    "id": 65,
+    "field": "type",
+    "predicted": "other",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-02-25 Cash App*ter Ro Oakland CA"
+  },
+  {
+    "id": 66,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Appl",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Hard Rock Bet Appl Davie FL"
+  },
+  {
+    "id": 67,
+    "field": "merchant",
+    "predicted": "Hard Rock Bet Appl",
+    "expected": "Hard Rock Bet",
+    "raw": "POS Debit- Debit Card 0384 05-31-25 Hard Rock Bet Appl Davie FL"
+  },
+  {
+    "id": 68,
+    "field": "type",
+    "predicted": "other",
+    "expected": "purchase",
+    "raw": "POS Debit- Debit Card 0384 05-29-25 Enableloans 855-2115599 SD"
+  },
+  {
+    "id": 69,
+    "field": "merchant",
+    "predicted": "Zelle vladimir",
+    "expected": "Vladimir Vi",
+    "raw": "POS Credit Adjustment 0384 Transaction 06-03-25 Zelle*vladimir VI Visa Direct CA"
+  },
+  {
+    "id": 69,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Credit Adjustment 0384 Transaction 06-03-25 Zelle*vladimir VI Visa Direct CA"
+  },
+  {
+    "id": 69,
+    "field": "type",
+    "predicted": "transfer",
+    "expected": "deposit",
+    "raw": "POS Credit Adjustment 0384 Transaction 06-03-25 Zelle*vladimir VI Visa Direct CA"
+  },
+  {
+    "id": 70,
+    "field": "category",
+    "predicted": "retail",
+    "expected": "gas",
+    "raw": "POS Debit- Debit Card 0384 06-02-25 Wawa 5105 Orlando FL"
+  },
+  {
+    "id": 72,
+    "field": "merchant",
+    "predicted": "Paypal Marhone Be Visa Direct",
+    "expected": "PayPal",
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA"
+  },
+  {
+    "id": 72,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA"
+  },
+  {
+    "id": 72,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA"
+  },
+  {
+    "id": 73,
+    "field": "merchant",
+    "predicted": "Paypal Marhone Be Visa Direct",
+    "expected": "PayPal",
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA"
+  },
+  {
+    "id": 73,
+    "field": "category",
+    "predicted": "fintech",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA"
+  },
+  {
+    "id": 73,
+    "field": "type",
+    "predicted": "purchase",
+    "expected": "transfer",
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA"
+  }
+]

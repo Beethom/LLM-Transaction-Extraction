@@ -1,0 +1,1112 @@
+[
+  {
+    "id": 1,
+    "raw": "POS Credit Adjustment 0898 Transaction 02-27-26 Earnin Gc Mountain View CA",
+    "amount": 50.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Earnin Gc",
+      "transaction_date": "02/27",
+      "total_amount": 50.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Mountain View"
+    },
+    "fields": null
+  },
+  {
+    "id": 2,
+    "raw": "Deposit - ACH Paid From Outcomes Operati Payroll 01Afd1",
+    "amount": 963.48,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Outcomes Operati",
+      "transaction_date": null,
+      "total_amount": 963.48,
+      "transaction_type": "deposit",
+      "category": "other",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 3,
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Floatme Subscripti San Antonio TX",
+    "amount": 4.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Floatme Subscripti",
+      "transaction_date": "02/26",
+      "total_amount": 4.99,
+      "transaction_type": "recurring",
+      "category": "fintech",
+      "city": "San Antonio"
+    },
+    "fields": null
+  },
+  {
+    "id": 4,
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Rmtly* Fffe7 Remitly.Com WA",
+    "amount": 15.08,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Remitly",
+      "transaction_date": "02/26",
+      "total_amount": 15.08,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 5,
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Cleo* Advance Repa Meetcleo.Com DE",
+    "amount": 45.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Cleo Advance Repa Meetcleo.Com",
+      "transaction_date": "02/26",
+      "total_amount": 45.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 6,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Zip* App Pay Later 183-37823729 Ny",
+    "amount": 46.5,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zip App Pay Later",
+      "transaction_date": "02/27",
+      "total_amount": 46.5,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 7,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Zip* App Pay Later 183-37823729 Ny",
+    "amount": 55.75,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zip App Pay Later",
+      "transaction_date": "02/27",
+      "total_amount": 55.75,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 8,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 *creditgenie Cash Conshohocken PA",
+    "amount": 114.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "creditgenie Cash",
+      "transaction_date": "02/27",
+      "total_amount": 114.99,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": "Conshohocken"
+    },
+    "fields": null
+  },
+  {
+    "id": 9,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Gptzero* Trial Ove Www.Gptzero.M Ny",
+    "amount": 155.88,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Gptzero",
+      "transaction_date": "02/27",
+      "total_amount": 155.88,
+      "transaction_type": "purchase",
+      "category": "services",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 10,
+    "raw": "POS Debit- Debit Card 0898 02-26-26 Rmtly* B610A Remitly.Com WA",
+    "amount": 499.93,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Remitly",
+      "transaction_date": "02/26",
+      "total_amount": 499.93,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 11,
+    "raw": "Paid To - Brigit-com Membership Chk 8410676",
+    "amount": 8.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Brigit-com Membership",
+      "transaction_date": null,
+      "total_amount": 8.99,
+      "transaction_type": "recurring",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 12,
+    "raw": "Paid To - Brigit-com Protection Chk 8410676",
+    "amount": 52.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Brigit-com Protection",
+      "transaction_date": null,
+      "total_amount": 52.99,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 13,
+    "raw": "Dividend",
+    "amount": 0.01,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Dividend",
+      "transaction_date": null,
+      "total_amount": 0.01,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 14,
+    "raw": "POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA",
+    "amount": 25.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Dave Inc",
+      "transaction_date": "02/28",
+      "total_amount": 25.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Los Angeles"
+    },
+    "fields": null
+  },
+  {
+    "id": 15,
+    "raw": "POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA",
+    "amount": 25.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Dave Inc",
+      "transaction_date": "02/28",
+      "total_amount": 25.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Los Angeles"
+    },
+    "fields": null
+  },
+  {
+    "id": 16,
+    "raw": "Dispute - Temp Credit",
+    "amount": 155.88,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": null,
+      "transaction_date": null,
+      "total_amount": 155.88,
+      "transaction_type": "other",
+      "category": "other",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 17,
+    "raw": "Deposit - RTP Paid From Ml Plus LLC",
+    "amount": 100.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Ml Plus LLC",
+      "transaction_date": null,
+      "total_amount": 100.0,
+      "transaction_type": "deposit",
+      "category": "transfer",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 18,
+    "raw": "Deposit - RTP Paid From Ml Plus LLC",
+    "amount": 100.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Ml Plus LLC",
+      "transaction_date": null,
+      "total_amount": 100.0,
+      "transaction_type": "deposit",
+      "category": "transfer",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 19,
+    "raw": "Zelle DB Anne Vante",
+    "amount": 80.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Anne Vante",
+      "transaction_date": null,
+      "total_amount": 80.0,
+      "transaction_type": "transfer",
+      "category": "transfer",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 20,
+    "raw": "Zelle DB Kircy Millien",
+    "amount": 100.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Kircy Millien",
+      "transaction_date": null,
+      "total_amount": 100.0,
+      "transaction_type": "transfer",
+      "category": "transfer",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 21,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Dave Inc Dave.Com CA",
+    "amount": 5.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Dave Inc",
+      "transaction_date": "02/27",
+      "total_amount": 5.0,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 22,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Affirm * Pay B2Oao 855-423-3729 CA",
+    "amount": 24.92,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Affirm",
+      "transaction_date": "02/27",
+      "total_amount": 24.92,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 23,
+    "raw": "POS Debit- Debit Card 0898 02-28-26 Pollo Tropical 100 Kissimmee FL",
+    "amount": 25.78,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Pollo Tropical",
+      "transaction_date": "02/28",
+      "total_amount": 25.78,
+      "transaction_type": "purchase",
+      "category": "restaurant",
+      "city": "Kissimmee"
+    },
+    "fields": null
+  },
+  {
+    "id": 24,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Affirm * Pay T4Tsu 855-423-3729 CA",
+    "amount": 33.72,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Affirm",
+      "transaction_date": "02/27",
+      "total_amount": 33.72,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 25,
+    "raw": "POS Debit- Debit Card 0898 02-27-26 Dave Inc Dave.Com CA",
+    "amount": 55.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Dave Inc",
+      "transaction_date": "02/27",
+      "total_amount": 55.0,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 26,
+    "raw": "POS Debit- Debit Card 0384 05-23-25 Klarna* Duke Energ Klarna.Com OH",
+    "amount": 112.5,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Klarna Duke Energy",
+      "transaction_date": "05/23",
+      "total_amount": 112.5,
+      "transaction_type": "purchase",
+      "category": "utilities",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 27,
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Klarna* Apple Klarna.Com OH",
+    "amount": 165.84,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Klarna Apple",
+      "transaction_date": "05/27",
+      "total_amount": 165.84,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 28,
+    "raw": "POS Debit- Debit Card 0384 05-23-25 Enableloans 855-2115599 SD",
+    "amount": 361.12,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Enableloans",
+      "transaction_date": "05/23",
+      "total_amount": 361.12,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 29,
+    "raw": "Paid To - Amazon Marketpla Internet Chk 4330513",
+    "amount": 18.18,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Amazon Marketplace",
+      "transaction_date": null,
+      "total_amount": 18.18,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 30,
+    "raw": "Paid To - Best Buy Auto Pymt Chk 12240215",
+    "amount": 101.94,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Best Buy Auto",
+      "transaction_date": null,
+      "total_amount": 101.94,
+      "transaction_type": "recurring",
+      "category": "retail",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 31,
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Earnin Cdhbd_b Palo Alto CA",
+    "amount": 150.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Earnin",
+      "transaction_date": "05/28",
+      "total_amount": 150.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Palo Alto"
+    },
+    "fields": null
+  },
+  {
+    "id": 32,
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL",
+    "amount": 899.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Ap",
+      "transaction_date": "05/28",
+      "total_amount": 899.0,
+      "transaction_type": "other",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 33,
+    "raw": "POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL",
+    "amount": 1102.39,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Ap",
+      "transaction_date": "05/28",
+      "total_amount": 1102.39,
+      "transaction_type": "other",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 34,
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Pp*apple.Com/Bill 402-935-7733 CA",
+    "amount": 2.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Apple.Com/Bill",
+      "transaction_date": "05/27",
+      "total_amount": 2.99,
+      "transaction_type": "purchase",
+      "category": "services",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 35,
+    "raw": "POS Debit- Debit Card 0384 05-27-25 365 Market J 888 4 Troy MI",
+    "amount": 3.61,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "365 Market J 888 4",
+      "transaction_date": "05/27",
+      "total_amount": 3.61,
+      "transaction_type": "purchase",
+      "category": "grocery",
+      "city": "Troy"
+    },
+    "fields": null
+  },
+  {
+    "id": 36,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Afterpay 185-52896014 CA",
+    "amount": 59.76,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Afterpay",
+      "transaction_date": "05/28",
+      "total_amount": 59.76,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 37,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ",
+    "amount": 370.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zelle Stephane Ly Visa Direct",
+      "transaction_date": "05/28",
+      "total_amount": 370.0,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 38,
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Zelle*stephane Ly Visa Direct AZ",
+    "amount": 425.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zelle Stephane Ly Visa Direct",
+      "transaction_date": "05/27",
+      "total_amount": 425.0,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 39,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Apple.Com/Bill 866-712-7753 CA",
+    "amount": 19.15,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Apple.Com/Bill",
+      "transaction_date": "05/28",
+      "total_amount": 19.15,
+      "transaction_type": "purchase",
+      "category": "services",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 40,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Cash App*ter Ro Oakland CA",
+    "amount": 20.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Cash App",
+      "transaction_date": "05/28",
+      "total_amount": 20.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Oakland"
+    },
+    "fields": null
+  },
+  {
+    "id": 41,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Wawa 5105 Orlando FL",
+    "amount": 20.31,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Wawa",
+      "transaction_date": "05/28",
+      "total_amount": 20.31,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 42,
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Hard Rock Bet Appl Davie FL",
+    "amount": 21.6,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Appl",
+      "transaction_date": "05/27",
+      "total_amount": 21.6,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 43,
+    "raw": "POS Debit - Debit Card 0384 Transaction 05-28-25 Denny's #7954 Orlando",
+    "amount": 23.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Denny's",
+      "transaction_date": "05/28",
+      "total_amount": 23.0,
+      "transaction_type": "purchase",
+      "category": "restaurant",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 44,
+    "raw": "POS Debit- Debit Card 0384 05-27-25 Denny's #7954 Orlando FL",
+    "amount": 27.04,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Denny's",
+      "transaction_date": "05/27",
+      "total_amount": 27.04,
+      "transaction_type": "purchase",
+      "category": "restaurant",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 45,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ",
+    "amount": 842.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zelle*stephane Ly Visa Direct",
+      "transaction_date": "05/28",
+      "total_amount": 842.0,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 46,
+    "raw": "POS Credit Adjustment 0384 Transaction 05-30-25 Hard Rock Bet Ap 5 Davie FL",
+    "amount": 915.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Ap",
+      "transaction_date": "05/30",
+      "total_amount": 915.0,
+      "transaction_type": "other",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 47,
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Playstation Networ 650-2956540 CA",
+    "amount": 9.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Playstation Network",
+      "transaction_date": "05/30",
+      "total_amount": 9.99,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 48,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Hard Rock Bet Appl Davie FL",
+    "amount": 20.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Appl",
+      "transaction_date": "05/28",
+      "total_amount": 20.0,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 49,
+    "raw": "POS Debit- Debit Card 0384 05-28-25 Hard Rock Bet Appl Davie FL",
+    "amount": 100.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Appl",
+      "transaction_date": "05/28",
+      "total_amount": 100.0,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 50,
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Cash App*ter Ro*ad Oakland CA",
+    "amount": 915.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Cash App",
+      "transaction_date": "05/30",
+      "total_amount": 915.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Oakland"
+    },
+    "fields": null
+  },
+  {
+    "id": 51,
+    "raw": "Paid To - Dave Davesubfee Chk 8410676",
+    "amount": 2.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Dave Davesubfee",
+      "transaction_date": null,
+      "total_amount": 2.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 52,
+    "raw": "Dividend",
+    "amount": 0.02,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": null,
+      "transaction_date": null,
+      "total_amount": 0.02,
+      "transaction_type": "other",
+      "category": "other",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 53,
+    "raw": "POS Credit Adjustment 0384 Transaction 06-02-25 Zelle*anne R Vant Visa Direct AZ",
+    "amount": 30.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zelle*anne R Vant",
+      "transaction_date": "06/02",
+      "total_amount": 30.0,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 54,
+    "raw": "POS Credit Adjustment 0384 Transaction 05-31-25 Earnin Cecdb_b Palo Alto CA",
+    "amount": 150.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Earnin",
+      "transaction_date": "05/31",
+      "total_amount": 150.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Palo Alto"
+    },
+    "fields": null
+  },
+  {
+    "id": 55,
+    "raw": "Deposit - ACH Paid From Cleo Ai Inc 12855771 ! 060225",
+    "amount": 0.01,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Cleo Ai Inc",
+      "transaction_date": "06/02",
+      "total_amount": 0.01,
+      "transaction_type": "deposit",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 56,
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Idt Boss Intl Call Www.Idt.Net NJ",
+    "amount": 1.75,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Idt Boss Intl Call",
+      "transaction_date": "06/01",
+      "total_amount": 1.75,
+      "transaction_type": "purchase",
+      "category": "services",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 57,
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Wawa 5105 Orlando FL",
+    "amount": 2.65,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Wawa",
+      "transaction_date": "05/30",
+      "total_amount": 2.65,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 58,
+    "raw": "POS Debit- Debit Card 0384 05-31-25 Wawa 5132 Orlando FL",
+    "amount": 3.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Wawa",
+      "transaction_date": "05/31",
+      "total_amount": 3.0,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 59,
+    "raw": "POS Debit - Debit Card 0384 Transaction 06-01-25 7-Eleven Kissimmee",
+    "amount": 4.29,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "7-Eleven",
+      "transaction_date": "06/01",
+      "total_amount": 4.29,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": "Kissimmee"
+    },
+    "fields": null
+  },
+  {
+    "id": 60,
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Cleo Ai Meetcleo.Com DE",
+    "amount": 6.6,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Cleo Ai Meetcleo.Com",
+      "transaction_date": "06/01",
+      "total_amount": 6.6,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 61,
+    "raw": "POS Debit- Debit Card 0384 05-31-25 Hard Rock Bet Appl Davie FL",
+    "amount": 11.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Appl",
+      "transaction_date": "05/31",
+      "total_amount": 11.0,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 62,
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Zelle*beethoven M Visa Direct AZ",
+    "amount": 20.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zelle beethoven M Visa Direct",
+      "transaction_date": "06/01",
+      "total_amount": 20.0,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 63,
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Wawa 5105 Orlando FL",
+    "amount": 23.71,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Wawa",
+      "transaction_date": "06/01",
+      "total_amount": 23.71,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 64,
+    "raw": "POS Debit- Debit Card 0384 05-30-25 Re *reversephone.C 213-894-9165 Ny",
+    "amount": 29.99,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "reversephone.C",
+      "transaction_date": "05/30",
+      "total_amount": 29.99,
+      "transaction_type": "purchase",
+      "category": "services",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 65,
+    "raw": "POS Debit- Debit Card 0384 06-02-25 Cash App*ter Ro Oakland CA",
+    "amount": 30.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Cash App",
+      "transaction_date": "06/02",
+      "total_amount": 30.0,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": "Oakland"
+    },
+    "fields": null
+  },
+  {
+    "id": 66,
+    "raw": "POS Debit- Debit Card 0384 06-01-25 Hard Rock Bet Appl Davie FL",
+    "amount": 40.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Appl",
+      "transaction_date": "06/01",
+      "total_amount": 40.0,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 67,
+    "raw": "POS Debit- Debit Card 0384 05-31-25 Hard Rock Bet Appl Davie FL",
+    "amount": 50.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Hard Rock Bet Appl",
+      "transaction_date": "05/31",
+      "total_amount": 50.0,
+      "transaction_type": "purchase",
+      "category": "entertainment",
+      "city": "Davie"
+    },
+    "fields": null
+  },
+  {
+    "id": 68,
+    "raw": "POS Debit- Debit Card 0384 05-29-25 Enableloans 855-2115599 SD",
+    "amount": 538.1,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Enableloans",
+      "transaction_date": "05/29",
+      "total_amount": 538.1,
+      "transaction_type": "other",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 69,
+    "raw": "POS Credit Adjustment 0384 Transaction 06-03-25 Zelle*vladimir VI Visa Direct CA",
+    "amount": 20.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Zelle vladimir",
+      "transaction_date": "06/03",
+      "total_amount": 20.0,
+      "transaction_type": "transfer",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 70,
+    "raw": "POS Debit- Debit Card 0384 06-02-25 Wawa 5105 Orlando FL",
+    "amount": 0.93,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Wawa",
+      "transaction_date": "06/02",
+      "total_amount": 0.93,
+      "transaction_type": "purchase",
+      "category": "retail",
+      "city": "Orlando"
+    },
+    "fields": null
+  },
+  {
+    "id": 71,
+    "raw": "Deposit - RTP Paid From Enableloans",
+    "amount": 1250.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Enableloans",
+      "transaction_date": null,
+      "total_amount": 1250.0,
+      "transaction_type": "deposit",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 72,
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA",
+    "amount": 3.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Paypal Marhone Be Visa Direct",
+      "transaction_date": "06/04",
+      "total_amount": 3.0,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 73,
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA",
+    "amount": 19.0,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Paypal Marhone Be Visa Direct",
+      "transaction_date": "06/04",
+      "total_amount": 19.0,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  },
+  {
+    "id": 74,
+    "raw": "POS Debit- Debit Card 0384 06-04-25 Afterpay 044-4123456 CA",
+    "amount": 26.61,
+    "json_valid": true,
+    "predicted": {
+      "merchant_name": "Afterpay",
+      "transaction_date": "06/04",
+      "total_amount": 26.61,
+      "transaction_type": "purchase",
+      "category": "fintech",
+      "city": null
+    },
+    "fields": null
+  }
+]

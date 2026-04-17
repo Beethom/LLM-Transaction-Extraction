@@ -1,0 +1,75 @@
+id,raw_text,json_valid,amount_ok,date_ok,merchant_ok,category_ok,type_ok,city_ok
+1,POS Credit Adjustment 0898 Transaction 02-27-26 Earnin Gc Mountain View CA,True,True,True,False,True,False,True
+2,Deposit - ACH Paid From Outcomes Operati Payroll 01Afd1,True,True,True,False,True,True,True
+3,POS Debit- Debit Card 0898 02-26-26 Floatme Subscripti San Antonio TX,True,True,True,False,True,True,True
+4,POS Debit- Debit Card 0898 02-26-26 Rmtly* Fffe7 Remitly.Com WA,True,True,True,True,False,False,True
+5,POS Debit- Debit Card 0898 02-26-26 Cleo* Advance Repa Meetcleo.Com DE,True,True,True,False,True,False,True
+6,POS Debit- Debit Card 0898 02-27-26 Zip* App Pay Later 183-37823729 Ny,True,True,True,False,True,True,True
+7,POS Debit- Debit Card 0898 02-27-26 Zip* App Pay Later 183-37823729 Ny,True,True,True,False,True,True,True
+8,POS Debit- Debit Card 0898 02-27-26 *creditgenie Cash Conshohocken PA,True,True,True,False,True,True,True
+9,POS Debit- Debit Card 0898 02-27-26 Gptzero* Trial Ove Www.Gptzero.M Ny,True,True,True,True,True,False,True
+10,POS Debit- Debit Card 0898 02-26-26 Rmtly* B610A Remitly.Com WA,True,True,True,True,False,True,True
+11,Paid To - Brigit-com Membership Chk 8410676,True,True,True,False,True,True,True
+12,Paid To - Brigit-com Protection Chk 8410676,True,True,True,False,True,False,True
+13,Dividend,True,True,True,False,False,True,True
+14,POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA,True,True,True,False,True,False,True
+15,POS Credit Adjustment 0898 Transaction 02-28-26 Dave Inc Los Angeles CA,True,True,True,False,True,False,True
+16,Dispute - Temp Credit,True,True,True,True,True,True,True
+17,Deposit - RTP Paid From Ml Plus LLC,True,True,True,True,False,True,True
+18,Deposit - RTP Paid From Ml Plus LLC,True,True,True,True,False,True,True
+19,Zelle DB Anne Vante,True,True,True,True,True,True,True
+20,Zelle DB Kircy Millien,True,True,True,True,True,True,True
+21,POS Debit- Debit Card 0898 02-27-26 Dave Inc Dave.Com CA,True,True,True,False,True,True,True
+22,POS Debit- Debit Card 0898 02-27-26 Affirm * Pay B2Oao 855-423-3729 CA,True,True,True,True,True,True,True
+23,POS Debit- Debit Card 0898 02-28-26 Pollo Tropical 100 Kissimmee FL,True,True,True,True,True,True,True
+24,POS Debit- Debit Card 0898 02-27-26 Affirm * Pay T4Tsu 855-423-3729 CA,True,True,True,True,True,True,True
+25,POS Debit- Debit Card 0898 02-27-26 Dave Inc Dave.Com CA,True,True,True,False,True,True,True
+26,POS Debit- Debit Card 0384 05-23-25 Klarna* Duke Energ Klarna.Com OH,True,True,True,True,True,True,True
+27,POS Debit- Debit Card 0384 05-27-25 Klarna* Apple Klarna.Com OH,True,True,True,True,False,True,True
+28,POS Debit- Debit Card 0384 05-23-25 Enableloans 855-2115599 SD,True,True,True,True,True,False,True
+29,Paid To - Amazon Marketpla Internet Chk 4330513,True,True,True,True,True,True,True
+30,Paid To - Best Buy Auto Pymt Chk 12240215,True,True,True,False,True,True,True
+31,POS Credit Adjustment 0384 Transaction 05-28-25 Earnin Cdhbd_b Palo Alto CA,True,True,True,True,True,False,True
+32,POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL,True,True,True,False,True,False,True
+33,POS Credit Adjustment 0384 Transaction 05-28-25 Hard Rock Bet Ap 5 Davie FL,True,True,True,False,True,False,True
+34,POS Debit- Debit Card 0384 05-27-25 Pp*apple.Com/Bill 402-935-7733 CA,True,True,True,False,True,False,True
+35,POS Debit- Debit Card 0384 05-27-25 365 Market J 888 4 Troy MI,True,True,True,False,True,True,True
+36,POS Debit- Debit Card 0384 05-28-25 Afterpay 185-52896014 CA,True,True,True,True,True,True,True
+37,POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ,True,True,True,False,False,True,True
+38,POS Debit- Debit Card 0384 05-27-25 Zelle*stephane Ly Visa Direct AZ,True,True,True,False,False,True,True
+39,POS Debit- Debit Card 0384 05-28-25 Apple.Com/Bill 866-712-7753 CA,True,True,True,False,True,False,True
+40,POS Debit- Debit Card 0384 05-28-25 Cash App*ter Ro Oakland CA,True,True,True,True,False,False,True
+41,POS Debit- Debit Card 0384 05-28-25 Wawa 5105 Orlando FL,True,True,True,True,False,True,True
+42,POS Debit- Debit Card 0384 05-27-25 Hard Rock Bet Appl Davie FL,True,True,True,False,True,True,True
+43,POS Debit - Debit Card 0384 Transaction 05-28-25 Denny's #7954 Orlando,True,True,True,True,True,True,True
+44,POS Debit- Debit Card 0384 05-27-25 Denny's #7954 Orlando FL,True,True,True,True,True,True,True
+45,POS Debit- Debit Card 0384 05-28-25 Zelle*stephane Ly Visa Direct AZ,True,True,True,False,False,True,True
+46,POS Credit Adjustment 0384 Transaction 05-30-25 Hard Rock Bet Ap 5 Davie FL,True,True,True,False,True,False,True
+47,POS Debit- Debit Card 0384 05-30-25 Playstation Networ 650-2956540 CA,True,True,True,True,True,False,True
+48,POS Debit- Debit Card 0384 05-28-25 Hard Rock Bet Appl Davie FL,True,True,True,False,True,True,True
+49,POS Debit- Debit Card 0384 05-28-25 Hard Rock Bet Appl Davie FL,True,True,True,False,True,True,True
+50,POS Debit- Debit Card 0384 05-30-25 Cash App*ter Ro*ad Oakland CA,True,True,True,True,False,False,True
+51,Paid To - Dave Davesubfee Chk 8410676,True,True,True,False,True,False,True
+52,Dividend,True,True,True,True,True,True,True
+53,POS Credit Adjustment 0384 Transaction 06-02-25 Zelle*anne R Vant Visa Direct AZ,True,True,True,False,False,False,True
+54,POS Credit Adjustment 0384 Transaction 05-31-25 Earnin Cecdb_b Palo Alto CA,True,True,True,True,True,False,True
+55,Deposit - ACH Paid From Cleo Ai Inc 12855771 ! 060225,True,True,True,False,True,True,True
+56,POS Debit- Debit Card 0384 06-01-25 Idt Boss Intl Call Www.Idt.Net NJ,True,True,True,False,True,True,True
+57,POS Debit- Debit Card 0384 05-30-25 Wawa 5105 Orlando FL,True,True,True,True,False,True,True
+58,POS Debit- Debit Card 0384 05-31-25 Wawa 5132 Orlando FL,True,True,True,True,False,True,True
+59,POS Debit - Debit Card 0384 Transaction 06-01-25 7-Eleven Kissimmee,True,True,True,True,False,True,True
+60,POS Debit- Debit Card 0384 06-01-25 Cleo Ai Meetcleo.Com DE,True,True,True,False,True,True,True
+61,POS Debit- Debit Card 0384 05-31-25 Hard Rock Bet Appl Davie FL,True,True,True,False,True,True,True
+62,POS Debit- Debit Card 0384 06-01-25 Zelle*beethoven M Visa Direct AZ,True,True,True,False,False,True,True
+63,POS Debit- Debit Card 0384 06-01-25 Wawa 5105 Orlando FL,True,True,True,True,False,True,True
+64,POS Debit- Debit Card 0384 05-30-25 Re *reversephone.C 213-894-9165 Ny,True,True,True,False,True,True,True
+65,POS Debit- Debit Card 0384 06-02-25 Cash App*ter Ro Oakland CA,True,True,True,True,False,False,True
+66,POS Debit- Debit Card 0384 06-01-25 Hard Rock Bet Appl Davie FL,True,True,True,False,True,True,True
+67,POS Debit- Debit Card 0384 05-31-25 Hard Rock Bet Appl Davie FL,True,True,True,False,True,True,True
+68,POS Debit- Debit Card 0384 05-29-25 Enableloans 855-2115599 SD,True,True,True,True,True,False,True
+69,POS Credit Adjustment 0384 Transaction 06-03-25 Zelle*vladimir VI Visa Direct CA,True,True,True,False,False,False,True
+70,POS Debit- Debit Card 0384 06-02-25 Wawa 5105 Orlando FL,True,True,True,True,False,True,True
+71,Deposit - RTP Paid From Enableloans,True,True,True,True,True,True,True
+72,POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA,True,True,True,False,False,False,True
+73,POS Debit- Debit Card 0384 06-04-25 Paypal *marhone Be Visa Direct CA,True,True,True,False,False,False,True
+74,POS Debit- Debit Card 0384 06-04-25 Afterpay 044-4123456 CA,True,True,True,True,True,True,True

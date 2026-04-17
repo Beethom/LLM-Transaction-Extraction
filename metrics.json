@@ -1,0 +1,11 @@
+{
+  "total_transactions": 74,
+  "json_valid": 74,
+  "json_validity_rate": 100.0,
+  "amount_accuracy": 100.0,
+  "date_accuracy": 100.0,
+  "merchant_accuracy": 45.9,
+  "category_accuracy": 68.9,
+  "type_accuracy": 66.2,
+  "city_accuracy": 100.0
+}
